@@ -1,0 +1,12 @@
+[
+  {
+    "id": "general",
+    "name": "Culture generale",
+    "description": "Questions variees sur le monde qui nous entoure"
+  },
+  {
+    "id": "science",
+    "name": "Sciences",
+    "description": "Questions de sciences et de nature"
+  }
+]
