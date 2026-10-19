@@ -1,0 +1,43 @@
+{
+    "id" : 2,
+    "name" : "Sports 1",
+    "kinds" : [
+        "Sports",
+        "Culture générale"
+    ],
+    "questions" : [
+        {
+            "id" : 1,
+            "question" : "Combien de joueurs une équipe de football aligne-t-elle sur le terrain ?",
+            "options" : [
+                "9",
+                "10",
+                "11",
+                "12"
+            ],
+            "answer" : 2
+        },
+        {
+            "id" : 2,
+            "question" : "Dans quel sport utilise-t-on un volant ?",
+            "options" : [
+                "Le tennis",
+                "Le badminton",
+                "Le volley-ball",
+                "Le handball"
+            ],
+            "answer" : 1
+        },
+        {
+            "id" : 3,
+            "question" : "Combien de points vaut un panier classique au basketball ?",
+            "options" : [
+                "1 point",
+                "2 points",
+                "3 points",
+                "4 points"
+            ],
+            "answer" : 1
+        }
+    ]
+}

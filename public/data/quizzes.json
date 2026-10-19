@@ -1,9 +1,0 @@
-[
-  {
-    "id": "decouverte",
-    "title": "Quiz decouverte",
-    "categoryIds": ["general", "science"],
-    "questionIds": ["q001", "q002"],
-    "difficulty": "facile"
-  }
-]
