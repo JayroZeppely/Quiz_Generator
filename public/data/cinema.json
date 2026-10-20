@@ -1,0 +1,44 @@
+{
+    "id": 6,
+    "name": "Cinéma 1",
+    "description": "Un quiz pour tester vos connaissances sur les films, les réalisateurs et les personnages célèbres.",
+    "kinds": [
+        "Cinéma",
+        "Culture populaire"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Comment s'appelle le sorcier principal de la saga Harry Potter ?",
+            "options": [
+                "Harry Potter",
+                "Frodon Sacquet",
+                "Luke Skywalker",
+                "Peter Parker"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 2,
+            "question": "Quel réalisateur a créé le film Titanic sorti en 1997 ?",
+            "options": [
+                "Steven Spielberg",
+                "James Cameron",
+                "Christopher Nolan",
+                "George Lucas"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 3,
+            "question": "Dans quel film trouve-t-on le personnage de Simba ?",
+            "options": [
+                "Le Roi Lion",
+                "Toy Story",
+                "Shrek",
+                "La Reine des neiges"
+            ],
+            "answer": 0
+        }
+    ]
+}

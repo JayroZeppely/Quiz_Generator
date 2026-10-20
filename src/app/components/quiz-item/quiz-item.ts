@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './quiz-item.css',
   templateUrl: './quiz-item.html',
 })
-export class QuizItem {}
+export class QuizItem {
+  @Input() id: number = 0;
+  @Input() name: string = 'quiz-item';
+  @Input() description: string = 'A simple quiz item';
+  @Input() kinds: string[] = ['Mathématiques', 'Sciences'];
+
+  startQuiz(id: number): void {
+    console.log(`Starting quiz with id: ${id}`);
+  }
+}

@@ -1,6 +1,11 @@
 {
     "id" : 1,
     "name" : "Mathématiques 1",
+    "description" : "Un quiz pour tester vos connaissances en mathématiques.",
+    "kinds" : [
+        "Mathématiques",
+        "Sciences"
+    ],
     "questions" : [
         {
             "id" : 1,

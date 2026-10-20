@@ -1,1 +1,6 @@
-<p>quiz-item works!</p>
+<div class="quiz-item">
+    <h3>{{ name }}</h3>
+    <p>{{description }}</p>
+    <p>Types: {{ kinds.join(', ') }}</p>
+    <button (click)="startQuiz(id)">Start Quiz</button>
+</div>

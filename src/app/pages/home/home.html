@@ -1,5 +1,34 @@
 <h1>Quiz Master</h1>
 <p>Le site qui collectionne les quizzes</p>
 <section class="quizzes-section">
-
+    <h2>Quizzes Disponibles</h2>
+    <div class="categories">
+        <h3>Catégories</h3>
+        <div class="category-list">
+            @for (category of categories(); track category) {
+                <div class="category-item">
+                    <input (change)="filterByCategory(category, $any($event.target).checked)" type="checkbox" checked=true id="{{ category }}" name="{{ category }}" value="{{ category }}">
+                    <label for="{{ category }}">{{ category }}</label>
+                </div>
+            }
+        </div>
+    </div>
+    @if (isLoading()) {
+        <p>Chargement des quiz...</p>
+    } @else if (errorMessage()) {
+        <p role="alert">{{ errorMessage() }}</p>
+    } @else {
+        <div id="quizzes-list">
+            @for (quiz of quizzes(); track quiz.id) {
+                @if (quiz.kinds.some(kind => selectedCategories().includes(kind))) {
+                    <app-quiz-item
+                        [id]="quiz.id"
+                        [name]="quiz.name"
+                        [description]="quiz.description"
+                        [kinds]="quiz.kinds"
+                    ></app-quiz-item>
+                }
+            }
+        </div>
+    }
 </section>

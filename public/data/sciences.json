@@ -1,0 +1,44 @@
+{
+    "id": 5,
+    "name": "Sciences 1",
+    "description": "Un quiz sur l'astronomie, le corps humain et les notions fondamentales de chimie.",
+    "kinds": [
+        "Sciences",
+        "Nature"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quelle planète est la plus proche du Soleil ?",
+            "options": [
+                "La Terre",
+                "Mars",
+                "Vénus",
+                "Mercure"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 2,
+            "question": "Quel organe permet principalement de respirer ?",
+            "options": [
+                "Le cœur",
+                "Les poumons",
+                "Le foie",
+                "L'estomac"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 3,
+            "question": "Quel est le symbole chimique de l'eau ?",
+            "options": [
+                "CO2",
+                "O2",
+                "H2O",
+                "NaCl"
+            ],
+            "answer": 2
+        }
+    ]
+}

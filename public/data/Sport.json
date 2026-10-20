@@ -1,6 +1,7 @@
 {
     "id" : 2,
     "name" : "Sports 1",
+    "description" : "Un quiz consacré aux règles, aux disciplines et aux connaissances sportives.",
     "kinds" : [
         "Sports",
         "Culture générale"

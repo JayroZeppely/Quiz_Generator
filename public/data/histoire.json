@@ -1,0 +1,44 @@
+{
+    "id": 4,
+    "name": "Histoire 1",
+    "description": "Un quiz pour réviser quelques événements et personnages importants de l'histoire.",
+    "kinds": [
+        "Histoire",
+        "Culture générale"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "En quelle année la Révolution française a-t-elle commencé ?",
+            "options": [
+                "1492",
+                "1789",
+                "1815",
+                "1914"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 2,
+            "question": "Qui était le premier empereur des Français ?",
+            "options": [
+                "Louis XIV",
+                "Charlemagne",
+                "Napoléon Bonaparte",
+                "Jules César"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 3,
+            "question": "Quel peuple a construit le Colisée de Rome ?",
+            "options": [
+                "Les Romains",
+                "Les Vikings",
+                "Les Égyptiens",
+                "Les Perses"
+            ],
+            "answer": 0
+        }
+    ]
+}

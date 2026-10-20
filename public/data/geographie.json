@@ -1,0 +1,44 @@
+{
+    "id": 3,
+    "name": "Géographie 1",
+    "description": "Un quiz pour découvrir les capitales, les océans et les grands continents.",
+    "kinds": [
+        "Géographie",
+        "Culture générale"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quelle est la capitale de l'Italie ?",
+            "options": [
+                "Madrid",
+                "Rome",
+                "Athènes",
+                "Lisbonne"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 2,
+            "question": "Quel est le plus grand océan du monde ?",
+            "options": [
+                "L'océan Atlantique",
+                "L'océan Indien",
+                "L'océan Pacifique",
+                "L'océan Arctique"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 3,
+            "question": "Sur quel continent se trouve le désert du Sahara ?",
+            "options": [
+                "L'Afrique",
+                "L'Asie",
+                "L'Europe",
+                "L'Amérique du Sud"
+            ],
+            "answer": 0
+        }
+    ]
+}
