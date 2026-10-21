@@ -6,6 +6,7 @@ interface Quiz {
   name: string;
   description: string;
   kinds: string[];
+  file: string;
 }
 
 @Component({
@@ -23,8 +24,6 @@ export class Home implements OnInit {
     'math.json',
     'sciences.json',
   ];
-
-
   quizzes = signal<Quiz[]>([]);
   categories = signal<string[]>([]);
   selectedCategories = signal<string[]>([]);
@@ -49,15 +48,13 @@ filterByCategory(category: string, checked: boolean): void {
             throw new Error(`Impossible de charger ${fileName} (${response.status})`);
           }
           let quizData = await response.json() as Quiz;
+          quizData.file = fileName;
           let kinds = quizData.kinds;
-          this.categories.update((currentCategories) => {
-            kinds.forEach((kind) => {
-              if (!currentCategories.includes(kind)) {
-                currentCategories.push(kind);
-              }
-            });
-            return currentCategories;
-          });
+          this.categories.update((currentCategories) =>
+            [...new Set([...currentCategories, ...kinds])].sort((a, b) =>
+              a.localeCompare(b),
+            ),
+          );
           return (quizData);
         }),
       ));

@@ -1,1 +1,17 @@
-<p>quiz works!</p>
+@if (!hasBegin()) {
+    <div>
+        @if (errorMessage()) {
+            <p role="alert">{{ errorMessage() }}</p>
+        } @else {
+            <app-quiz-details
+            [name]="quizInfos()?.name || ''"
+            [description]="quizInfos()?.description || ''"
+            [kinds]="quizInfos()?.kinds || []"
+            [numberOfQuestions]="quizInfos()?.numberOfQuestions || 0">
+            </app-quiz-details>
+            <button type="button" (click)="beginQuiz()">Commencer le Quiz</button>
+        }
+    </div>
+} @else {
+    <app-quiz-question></app-quiz-question>
+}
