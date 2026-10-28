@@ -3,20 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { QuizDetails } from '../../components/quiz-details/quiz-details';
 import { QuizQuestion } from '../../components/quiz-question/quiz-question';
 
-interface QuizInfos {
-  id: number;
-  name: string;
-  description: string;
-  kinds: string[];
-  questions: Array<{
-    id: number;
-    question: string;
-    options: string[];
-    answer: number;
-  }>;
-  numberOfQuestions: number;
-}
-
 @Component({
   imports: [QuizDetails, QuizQuestion],
   selector: 'app-quiz',
@@ -26,23 +12,32 @@ interface QuizInfos {
 
 export class Quiz implements OnInit {
 
-  private readonly activedRoute = inject(ActivatedRoute);
+  private readonly activatedRoute = inject(ActivatedRoute);
   private readonly router = inject(Router);
 
   id: number | null = 0;
-  score : number = 0;
   file: string | null = null;
   quizInfos = signal<QuizInfos | null>(null);
   errorMessage = signal<string | null>(null);
   hasBegin = signal(false);
   questions = signal<QuizInfos['questions'] | null>(null);
+  answers = signal<number[]>([]);
   currentQuestionIndex = signal<number>(0);
+
+  get isFinish(): boolean {
+    for (let i = 0; i < (this.questions()?.length || 0); i++) {
+      if (this.answers()[i] == undefined || this.answers()[i] == null) {
+        return false;
+      }
+    }
+    return this.answers().length === (this.questions()?.length || 0);
+  }
 
   async ngOnInit(): Promise<void> {
     try {
-      const params = this.activedRoute.snapshot.params;
+      const params = this.activatedRoute.snapshot.params;
       this.id = params['id'] ? parseInt(params['id'], 10) : null;
-      this.file = this.activedRoute.snapshot.queryParamMap.get('file');
+      this.file = this.activatedRoute.snapshot.queryParamMap.get('file');
       await this.loadQuizInfos();
     } catch (error: unknown) {
       this.errorMessage.set(
@@ -91,13 +86,41 @@ export class Quiz implements OnInit {
     this.currentQuestionIndex.update((index) => Math.max(index - 1, 0));
   }
 
-  incrementScore(): void {
-    this.score++;
+  selectAnswer(questionId: number, selectedOption: number): void {
+    this.answers.update((currentAnswers) => {
+      const updatedAnswers = [...currentAnswers];
+      updatedAnswers[questionId] = selectedOption;
+      return updatedAnswers;
+    });
   }
 
   finishQuiz(): void {
+    const questions = this.questions();
+    if (!questions) {
+      return;
+    }
+
+    let score = 0;
+    const correctAnswers: string[] = [];
+
+    for (let i = 0; i < questions.length; i++) {
+      const correctAnswer = questions[i].answer;
+      const selectedAnswer = this.answers()[i];
+      const correctAnswerText = questions[i].options[correctAnswer] ?? 'Option non trouvée';
+
+      correctAnswers.push(correctAnswerText);
+
+      if (correctAnswer === selectedAnswer) {
+        score++;
+      }
+    }
+
     void this.router.navigate(['/score'], {
-      queryParams: { score: this.score, total: this.questions()?.length ?? 0 },
+      queryParams: {
+        score: score,
+        total: questions.length,
+        answers: JSON.stringify(correctAnswers),
+      },
     });
   }
 }

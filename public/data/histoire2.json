@@ -1,0 +1,44 @@
+{
+    "id": 11,
+    "name": "Histoire 2",
+    "description": "Une deuxième série pour explorer l'Antiquité, le Moyen Âge et l'histoire moderne.",
+    "kinds": [
+        "Histoire",
+        "Culture générale"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quelle civilisation a construit les pyramides de Gizeh ?",
+            "options": [
+                "Les Égyptiens",
+                "Les Grecs",
+                "Les Romains",
+                "Les Mayas"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 2,
+            "question": "Quel roi français était surnommé le Roi-Soleil ?",
+            "options": [
+                "Louis IX",
+                "Louis XIV",
+                "Henri IV",
+                "François Ier"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 3,
+            "question": "Quel célèbre paquebot a sombré en 1912 ?",
+            "options": [
+                "Le Titanic",
+                "Le Lusitania",
+                "Le Queen Mary",
+                "Le France"
+            ],
+            "answer": 0
+        }
+    ]
+}

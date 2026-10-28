@@ -39,6 +39,28 @@
                 "L'Amérique du Sud"
             ],
             "answer": 0
+        },
+        {
+            "id" : 4,
+            "question" : "Quel pays est surnommé le pays du Soleil-Levant ?",
+            "options" : [
+                "La Chine",
+                "Le Japon",
+                "La Thaïlande",
+                "La Corée du Sud"
+            ],
+            "answer" : 1
+        },
+        {
+            "id" : 5,
+            "question" : "Quelle est la capitale du Canada ?",
+            "options" : [
+                "Toronto",
+                "Vancouver",
+                "Ottawa",
+                "Montréal"
+            ],
+            "answer" : 2
         }
     ]
 }

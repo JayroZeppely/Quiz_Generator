@@ -39,6 +39,17 @@
                 "Les Perses"
             ],
             "answer": 0
+        },
+        {
+            "id" : 4,
+            "question" : "Quel événement a eu lieu en 1492 ?",
+            "options" : [
+                "La découverte de l'Amérique par Christophe Colomb",
+                "La chute de l'Empire romain",
+                "La Révolution française",
+                "La bataille de Waterloo"
+            ],
+            "answer" : 0
         }
     ]
 }

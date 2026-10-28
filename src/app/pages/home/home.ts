@@ -1,14 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { QuizItem } from '../../components/quiz-item/quiz-item';
 
-interface Quiz {
-  id: number;
-  name: string;
-  description: string;
-  kinds: string[];
-  file: string;
-}
-
 @Component({
   imports: [QuizItem],
   selector: 'app-home',
@@ -18,11 +10,17 @@ interface Quiz {
 export class Home implements OnInit {
   readonly quizFiles = [
     'sport.json',
+    'sport2.json',
     'cinema.json',
+    'cinema2.json',
     'geographie.json',
+    'geographie2.json',
     'histoire.json',
+    'histoire2.json',
     'math.json',
+    'math2.json',
     'sciences.json',
+    'sciences2.json',
   ];
   quizzes = signal<Quiz[]>([]);
   categories = signal<string[]>([]);
@@ -36,7 +34,6 @@ filterByCategory(category: string, checked: boolean): void {
   } else {
     this.selectedCategories.update((current) => current.filter((c) => c !== category));
   }
-  console.log('Selected categories:', this.selectedCategories());
 }
 
   async ngOnInit(): Promise<void> {

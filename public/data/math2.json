@@ -1,0 +1,55 @@
+{
+    "id": 7,
+    "name": "Mathématiques 2",
+    "description": "Une nouvelle série de questions sur le calcul, la géométrie et les fractions.",
+    "kinds": [
+        "Mathématiques",
+        "Sciences"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quelle fraction est équivalente à 1/2 ?",
+            "options": [
+                "2/3",
+                "3/6",
+                "4/5",
+                "5/8"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 2,
+            "question": "Combien font 144 ÷ 12 ?",
+            "options": [
+                "10",
+                "11",
+                "12",
+                "14"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 3,
+            "question": "Combien de côtés possède un hexagone ?",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 4,
+            "question": "Quel nombre est égal à 25 % de 80 ?",
+            "options": [
+                "10",
+                "15",
+                "20",
+                "25"
+            ],
+            "answer": 2
+        }
+    ]
+}

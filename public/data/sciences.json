@@ -39,6 +39,39 @@
                 "NaCl"
             ],
             "answer": 2
+        },
+        {
+            "id" : 4,
+            "question" : "Quel gaz les plantes absorbent-elles principalement ?",
+            "options" : [
+                "L'oxygène",
+                "Le dioxyde de carbone",
+                "L'hydrogène",
+                "L'azote"
+            ],
+            "answer" : 1
+        },
+        {
+            "id" : 5,
+            "question" : "Combien de pattes possède une araignée ?",
+            "options" : [
+                "6",
+                "8",
+                "10",
+                "12"
+            ],
+            "answer" : 1
+        },
+        {
+            "id" : 6,
+            "question" : "À quelle température l'eau gèle-t-elle habituellement ?",
+            "options" : [
+                "-10 °C",
+                "0 °C",
+                "10 °C",
+                "100 °C"
+            ],
+            "answer" : 1
         }
     ]
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -6,4 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './not-found.css',
   templateUrl: './not-found.html',
 })
-export class NotFound {}
+export class NotFound {
+
+  private readonly router = inject(Router);
+
+  goBackToHome(): void {
+    this.router.navigate(['/']);
+  }
+}

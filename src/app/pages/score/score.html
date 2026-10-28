@@ -1,5 +1,11 @@
 <h1>Félicitations</h1>
 <p>Vous avez terminé le quiz !</p>
 <p>Votre score est de {{ score }} sur {{ total }}.</p>
+<p>Les bonnes réponses étaient :</p>
+<ul>
+  @for (answer of answers; track $index) {
+    <li>{{ answer }}</li>
+  }
+</ul>
 <p>Merci d'avoir participé !</p>
 <button (click)="goToHome()">Retour à l'accueil</button>

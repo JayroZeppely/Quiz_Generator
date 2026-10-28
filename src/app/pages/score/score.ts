@@ -9,15 +9,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class Score {
 
-  private readonly activedRoute = inject(ActivatedRoute);
+  private readonly activatedRoute = inject(ActivatedRoute);
   private readonly router = inject(Router);
 
-  @Input() score: number = 0;
-  @Input() total: number = 0;
+  score: number = 0;
+  total: number = 0;
+  answers: String[] = [];
 
   ngOnInit(): void {
-      this.score = parseInt(this.activedRoute.snapshot.queryParamMap.get('score') ?? '0');
-      this.total = parseInt(this.activedRoute.snapshot.queryParamMap.get('total') ?? '0');
+      this.score = parseInt(this.activatedRoute.snapshot.queryParamMap.get('score') ?? '0');
+      this.total = parseInt(this.activatedRoute.snapshot.queryParamMap.get('total') ?? '0');
+      this.answers = this.activatedRoute.snapshot.queryParamMap.get('answers') ? JSON.parse(this.activatedRoute.snapshot.queryParamMap.get('answers') ?? '[]') : [];
   }
 
   goToHome(): void {

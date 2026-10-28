@@ -1,0 +1,77 @@
+{
+    "id": 12,
+    "name": "Sciences 2",
+    "description": "Une deuxième série sur la biologie, la physique et l'environnement.",
+    "kinds": [
+        "Sciences",
+        "Nature"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quelle force nous maintient au sol ?",
+            "options": [
+                "Le magnétisme",
+                "La gravité",
+                "La pression",
+                "La friction"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 2,
+            "question": "Quel est le plus grand organe du corps humain ?",
+            "options": [
+                "Le cœur",
+                "Le foie",
+                "La peau",
+                "Le cerveau"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 3,
+            "question": "Comment appelle-t-on le passage de l'eau liquide à l'état gazeux ?",
+            "options": [
+                "La fusion",
+                "La condensation",
+                "L'évaporation",
+                "La solidification"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 4,
+            "question": "Quelle énergie est produite par les panneaux solaires ?",
+            "options": [
+                "L'énergie solaire",
+                "L'énergie nucléaire",
+                "L'énergie hydraulique",
+                "L'énergie fossile"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 5,
+            "question": "Quel animal est un mammifère ?",
+            "options": [
+                "Le dauphin",
+                "Le crocodile",
+                "La truite",
+                "Le manchot"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 6,
+            "question": "Quelle partie de la plante absorbe principalement l'eau du sol ?",
+            "options": [
+                "La fleur",
+                "La feuille",
+                "La tige",
+                "Les racines"
+            ],
+            "answer": 3
+        }
+    ]
+}

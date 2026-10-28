@@ -1,8 +1,17 @@
-<h1>{{ question }}</h1>
-<ul>
+<h1>Question {{ id }}</h1>
+<fieldset>
+  <legend>{{ question }}</legend>
   @for (option of options; track $index) {
-    <li>{{ option }}</li>
+    <div class="option">
+      <input
+        type="radio"
+        name="question-{{ id }}"
+        [checked]="selectedOption === $index"
+        (change)="selectOption(id - 1, $index)"
+      >
+      <label>{{ option }}</label>
+    </div>
   }
-</ul>
-<Button (click)="goToPreviousQuestion()">Précédent</Button>
-<Button (click)="goToNextQuestion()">Suivant</Button>
+</fieldset>
+<button type="button" id="btn_previous" [disabled]="isPreviousDisabled" (click)="goToPreviousQuestion()">Précédent</button>
+<button type="button" id="btn_next" [disabled]="isNextDisabled" (click)="goToNextQuestion()">Suivant</button>

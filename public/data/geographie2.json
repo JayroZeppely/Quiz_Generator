@@ -1,0 +1,66 @@
+{
+    "id": 10,
+    "name": "Géographie 2",
+    "description": "Une deuxième série sur les pays, les reliefs et les grandes villes du monde.",
+    "kinds": [
+        "Géographie",
+        "Culture générale"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quel est le plus haut sommet du monde ?",
+            "options": [
+                "Le mont Blanc",
+                "L'Everest",
+                "Le Kilimandjaro",
+                "Le K2"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 2,
+            "question": "Dans quel pays se trouve la ville de Marrakech ?",
+            "options": [
+                "Le Maroc",
+                "L'Égypte",
+                "La Tunisie",
+                "L'Algérie"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 3,
+            "question": "Quel fleuve traverse Paris ?",
+            "options": [
+                "La Loire",
+                "Le Rhône",
+                "La Seine",
+                "La Garonne"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 4,
+            "question": "Quel est le plus grand pays du monde par sa superficie ?",
+            "options": [
+                "Le Canada",
+                "La Chine",
+                "Les États-Unis",
+                "La Russie"
+            ],
+            "answer": 3
+        },
+        {
+            "id": 5,
+            "question": "Quelle mer sépare l'Europe de l'Afrique au niveau de l'Espagne ?",
+            "options": [
+                "La mer Méditerranée",
+                "La mer Baltique",
+                "La mer du Nord",
+                "La mer Noire"
+            ],
+            "answer": 0
+        }
+    ]
+}

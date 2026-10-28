@@ -18,10 +18,13 @@
     [question]="questions()?.[currentQuestionIndex()].question || ''"
     [options]="questions()?.[currentQuestionIndex()].options || []"
     [answer]="questions()?.[currentQuestionIndex()].answer || 0"
+    [isPreviousDisabled]="currentQuestionIndex() === 0"
+    [isNextDisabled]="currentQuestionIndex() === ((questions()?.length || 1) - 1)"
     (nextQuestion)="goToNextQuestion()"
-    (previousQuestion)="goToPreviousQuestion()">
+    (previousQuestion)="goToPreviousQuestion()"
+    (answerSelected)="selectAnswer($event.questionId, $event.selectedOption)">
     </app-quiz-question>
     @if (currentQuestionIndex() === (questions()?.length || 0) - 1) {
-        <button type="button" (click)="finishQuiz()">Terminer le Quiz</button>
+        <button type="button" (click)="finishQuiz()" [disabled]="!isFinish">Terminer le Quiz</button>
     }
 }

@@ -1,0 +1,55 @@
+{
+    "id": 9,
+    "name": "Cinéma 2",
+    "description": "Une deuxième série sur les classiques du cinéma, les acteurs et les grandes sagas.",
+    "kinds": [
+        "Cinéma",
+        "Culture populaire"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Quel film raconte l'histoire d'un parc peuplé de dinosaures clonés ?",
+            "options": [
+                "Jurassic Park",
+                "Avatar",
+                "Inception",
+                "Gladiator"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 2,
+            "question": "Quel personnage est interprété par Rowan Atkinson dans une célèbre série de films comiques ?",
+            "options": [
+                "Mr Bean",
+                "Rocky",
+                "Indiana Jones",
+                "Forrest Gump"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 3,
+            "question": "Quel film d'animation met en scène une famille de super-héros ?",
+            "options": [
+                "Les Indestructibles",
+                "Le Monde de Nemo",
+                "Bambi",
+                "Pocahontas"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 4,
+            "question": "Qui a réalisé le film E.T. l'extra-terrestre ?",
+            "options": [
+                "Steven Spielberg",
+                "Tim Burton",
+                "Quentin Tarantino",
+                "Alfred Hitchcock"
+            ],
+            "answer": 0
+        }
+    ]
+}

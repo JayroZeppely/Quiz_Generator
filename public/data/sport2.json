@@ -1,0 +1,66 @@
+{
+    "id": 8,
+    "name": "Sports 2",
+    "description": "Une deuxième série consacrée aux grandes compétitions et aux disciplines sportives.",
+    "kinds": [
+        "Sports",
+        "Culture générale"
+    ],
+    "questions": [
+        {
+            "id": 1,
+            "question": "Dans quel sport se dispute le Tour de France ?",
+            "options": [
+                "Le cyclisme",
+                "L'athlétisme",
+                "La natation",
+                "Le ski"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 2,
+            "question": "Combien de joueurs une équipe de volley-ball compte-t-elle sur le terrain ?",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 3,
+            "question": "Quel objet utilise-t-on au tennis de table ?",
+            "options": [
+                "Un volant",
+                "Une balle et une raquette",
+                "Un ballon ovale",
+                "Un palet"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 4,
+            "question": "Dans quelle discipline réalise-t-on un saut à la perche ?",
+            "options": [
+                "L'athlétisme",
+                "L'escrime",
+                "L'aviron",
+                "Le judo"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 5,
+            "question": "Quelle couleur porte le maillot du leader du Tour de France ?",
+            "options": [
+                "Vert",
+                "Jaune",
+                "Rouge",
+                "Bleu"
+            ],
+            "answer": 1
+        }
+    ]
+}

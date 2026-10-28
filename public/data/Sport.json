@@ -39,6 +39,17 @@
                 "4 points"
             ],
             "answer" : 1
+        },
+        {
+            "id" : 4,
+            "question" : "Quelle est la distance officielle d'un marathon ?",
+            "options" : [
+                "21,097 km",
+                "30 km",
+                "42,195 km",
+                "50 km"
+            ],
+            "answer" : 2
         }
     ]
 }
