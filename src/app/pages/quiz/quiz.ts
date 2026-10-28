@@ -30,10 +30,13 @@ export class Quiz implements OnInit {
   private readonly router = inject(Router);
 
   id: number | null = 0;
+  score : number = 0;
   file: string | null = null;
   quizInfos = signal<QuizInfos | null>(null);
   errorMessage = signal<string | null>(null);
   hasBegin = signal(false);
+  questions = signal<QuizInfos['questions'] | null>(null);
+  currentQuestionIndex = signal<number>(0);
 
   async ngOnInit(): Promise<void> {
     try {
@@ -65,9 +68,36 @@ export class Quiz implements OnInit {
       ...quizData,
       numberOfQuestions: quizData.questions.length,
     });
+    this.questions.set(quizData.questions);
   }
 
   beginQuiz(): void {
     this.hasBegin.set(true);
+    this.currentQuestionIndex.set(0);
+  }
+
+  goToNextQuestion(): void {
+    const questions = this.questions();
+    if (!questions) {
+      return;
+    }
+
+    this.currentQuestionIndex.update((index) =>
+      Math.min(index + 1, questions.length - 1),
+    );
+  }
+
+  goToPreviousQuestion(): void {
+    this.currentQuestionIndex.update((index) => Math.max(index - 1, 0));
+  }
+
+  incrementScore(): void {
+    this.score++;
+  }
+
+  finishQuiz(): void {
+    void this.router.navigate(['/score'], {
+      queryParams: { score: this.score, total: this.questions()?.length ?? 0 },
+    });
   }
 }

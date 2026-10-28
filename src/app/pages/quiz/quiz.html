@@ -13,5 +13,15 @@
         }
     </div>
 } @else {
-    <app-quiz-question></app-quiz-question>
+    <app-quiz-question 
+    [id]="questions()?.[currentQuestionIndex()].id || 0"
+    [question]="questions()?.[currentQuestionIndex()].question || ''"
+    [options]="questions()?.[currentQuestionIndex()].options || []"
+    [answer]="questions()?.[currentQuestionIndex()].answer || 0"
+    (nextQuestion)="goToNextQuestion()"
+    (previousQuestion)="goToPreviousQuestion()">
+    </app-quiz-question>
+    @if (currentQuestionIndex() === (questions()?.length || 0) - 1) {
+        <button type="button" (click)="finishQuiz()">Terminer le Quiz</button>
+    }
 }
