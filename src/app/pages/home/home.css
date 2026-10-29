@@ -1,20 +1,48 @@
 .quizzes-section {
-    padding : 20px;
+    padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.quizzes-section h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .category-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 0.75rem;
     justify-content: center;
 }
 
+.category-item {
+    align-items: center;
+    background: var(--color-blue-soft);
+    border-radius: 999px;
+    color: #1e40af;
+    display: flex;
+    gap: 0.45rem;
+    padding: 0.45rem 0.85rem;
+}
+
+.category-item input {
+    accent-color: var(--color-blue);
+}
+
 #quizzes-list {
-    height : 600px;
-    width : fit-content;
-    margin : 10px auto;
-    padding : 20px;
-    overflow-y : auto;
-    display : flex;
-    flex-direction : column;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    margin: 1.5rem auto 0;
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 0.25rem;
+}
+
+.about-button {
+    width: fit-content;
+    margin: 2rem auto 0;
+}
+
+#btn_about {
+    width: 200px;
 }
