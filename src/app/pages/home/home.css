@@ -1,0 +1,20 @@
+.quizzes-section {
+    padding : 20px;
+}
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#quizzes-list {
+    height : 600px;
+    width : fit-content;
+    margin : 10px auto;
+    padding : 20px;
+    overflow-y : auto;
+    display : flex;
+    flex-direction : column;
+}

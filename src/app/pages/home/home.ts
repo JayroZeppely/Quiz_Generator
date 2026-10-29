@@ -1,5 +1,6 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { QuizItem } from '../../components/quiz-item/quiz-item';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [QuizItem],
@@ -8,6 +9,9 @@ import { QuizItem } from '../../components/quiz-item/quiz-item';
   templateUrl: './home.html',
 })
 export class Home implements OnInit {
+
+  private readonly router = inject(Router);
+  
   readonly quizFiles = [
     'sport.json',
     'sport2.json',
@@ -65,5 +69,9 @@ filterByCategory(category: string, checked: boolean): void {
       this.isLoading.set(false);
       this.selectedCategories.set(this.categories());
     }
+  }
+
+  goToAbout(): void {
+    this.router.navigate(['/about']);
   }
 }

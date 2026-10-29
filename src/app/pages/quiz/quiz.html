@@ -1,30 +1,33 @@
-@if (!hasBegin()) {
-    <div>
-        @if (errorMessage()) {
-            <p role="alert">{{ errorMessage() }}</p>
-        } @else {
-            <app-quiz-details
-            [name]="quizInfos()?.name || ''"
-            [description]="quizInfos()?.description || ''"
-            [kinds]="quizInfos()?.kinds || []"
-            [numberOfQuestions]="quizInfos()?.numberOfQuestions || 0">
-            </app-quiz-details>
-            <button type="button" (click)="beginQuiz()">Commencer le Quiz</button>
+<main>
+    @if (!hasBegin()) {
+        <div id="details-quiz-container">
+            @if (errorMessage()) {
+                <p role="alert">{{ errorMessage() }}</p>
+            } @else {
+                <app-quiz-details
+                [name]="quizInfos()?.name || ''"
+                [description]="quizInfos()?.description || ''"
+                [kinds]="quizInfos()?.kinds || []"
+                [numberOfQuestions]="quizInfos()?.numberOfQuestions || 0">
+                </app-quiz-details>
+                <button type="button" (click)="beginQuiz()">Commencer le Quiz</button>
+            }
+        </div>
+    } @else {
+        <app-quiz-question 
+        [id]="questions()?.[currentQuestionIndex()].id || 0"
+        [question]="questions()?.[currentQuestionIndex()].question || ''"
+        [options]="questions()?.[currentQuestionIndex()].options || []"
+        [answer]="questions()?.[currentQuestionIndex()].answer || 0"
+        [isPreviousDisabled]="currentQuestionIndex() === 0"
+        [isNextDisabled]="currentQuestionIndex() === ((questions()?.length || 1) - 1)"
+        (nextQuestion)="goToNextQuestion()"
+        (previousQuestion)="goToPreviousQuestion()"
+        (answerSelected)="selectAnswer($event.questionId, $event.selectedOption)">
+        </app-quiz-question>
+        @if (currentQuestionIndex() === (questions()?.length || 0) - 1) {
+            <button type="button" (click)="finishQuiz()" [disabled]="!isFinish">Terminer le Quiz</button>
         }
-    </div>
-} @else {
-    <app-quiz-question 
-    [id]="questions()?.[currentQuestionIndex()].id || 0"
-    [question]="questions()?.[currentQuestionIndex()].question || ''"
-    [options]="questions()?.[currentQuestionIndex()].options || []"
-    [answer]="questions()?.[currentQuestionIndex()].answer || 0"
-    [isPreviousDisabled]="currentQuestionIndex() === 0"
-    [isNextDisabled]="currentQuestionIndex() === ((questions()?.length || 1) - 1)"
-    (nextQuestion)="goToNextQuestion()"
-    (previousQuestion)="goToPreviousQuestion()"
-    (answerSelected)="selectAnswer($event.questionId, $event.selectedOption)">
-    </app-quiz-question>
-    @if (currentQuestionIndex() === (questions()?.length || 0) - 1) {
-        <button type="button" (click)="finishQuiz()" [disabled]="!isFinish">Terminer le Quiz</button>
     }
-}
+</main>
+
